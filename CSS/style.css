@@ -51,12 +51,16 @@ body{
 .icon-image:hover .details{
    opacity: 1; 
    transform: translateY(4px);
-   transition: all 0.5s ease;
+   transition: all 0.3s ease;
+   transition-delay: 0.9s ;
 }
 
 .icon-image:hover .hover-image{
-    left: 200px;
+    left: -200px;
     z-index: 12;
+    transform: translateX(80px);
+    transition: left 0.5s, z-index 0s, transform 0.5s;
+    transition-delay: 0s ,0.5s, 0.5s;
 }
 
 .hover-image{
@@ -68,6 +72,10 @@ body{
     left: 50%;
     transform: translateX(-50%);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    z-index: 0;
+    transition: transform 0.5s, z-index 0s, left 0.5s;
+    transition-delay: 0s, 0.5s, 0.5s;
+    pointer-events: none;
 }
 
 .hover-image img{
@@ -132,7 +140,18 @@ body{
     margin: -3px 0 5px 0;
 }
 
+.last .hover-image{
+    transition: none;
+}
 
+.last:hover .hover-image{
+    transition: none;
+}
+
+
+.last:hover .details{
+    transition-delay: 0s;
+}
 
 
 
