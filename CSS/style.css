@@ -148,7 +148,6 @@ body{
     transition: none;
 }
 
-
 .last:hover .details{
     transition-delay: 0s;
 }
